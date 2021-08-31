@@ -2,9 +2,10 @@
 #include<stdlib.h>
 #include<time.h>
 
-/* more headers goes there */
-
-/* betty style doc for function main goes there */
+/**
+ * main - if conditions
+ * Return: 0 if all is good
+ */
 
 int main(void)
 {
