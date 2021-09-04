@@ -8,7 +8,7 @@
 
 int main(void)
 {
-char lower, upper, c;
+char lower, upper;
 for (lower = 'a'; lower <= 'z'; lower++)
 putchar(lower);
 for (upper = 'A'; upper <= 'Z'; upper++)
