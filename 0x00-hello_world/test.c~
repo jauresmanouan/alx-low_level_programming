@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+/**
+ * main - test
+ * return: 0 if all is good
+ */
+
+int main(void)
+{
+printf("Nice to see you \n");
+return (0);
+}
