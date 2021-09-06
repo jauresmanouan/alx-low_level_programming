@@ -9,9 +9,9 @@
 int main(void)
 {
 char l;
-l = 'z';
-
 int i;
+
+l = 'z';
 i = 0;
 
 while (i < 26)
