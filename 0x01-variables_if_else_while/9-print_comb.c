@@ -20,4 +20,5 @@ putchar(44);
 putchar(0);
 }
 putchar(10);
+return (0);
 }
