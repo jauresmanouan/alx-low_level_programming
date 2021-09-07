@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  * main - write _putchar
@@ -9,13 +9,12 @@
 
 int main(void)
 {
-char c[] = {'_',  'p', 'u', 't', 'c', 'h', 'a', 'r'};
+char c[] = {'_',  'p', 'u', 't', 'c', 'h', 'a', 'r', '\n'};
 int i = 0;
 
 for (i = 0; i <= 8; i++)
 {
-putchar(c[i]);
+_putchar(c[i]);
 }
-putchar(10);
 return (0);
 }
