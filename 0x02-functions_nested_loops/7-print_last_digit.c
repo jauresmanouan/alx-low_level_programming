@@ -12,6 +12,7 @@ a = i % 10;
 
 if (a < 0)
 a *= -1;
-return (_putchar(a + 48));
+_putchar(a + 48);
+ return (0);
 
 }
