@@ -1,11 +1,14 @@
 # include "main.h"
 
 /**
- * int add - sum 2 numbers
+ * add - sum 2 numbers
+ * @a: first number
+ * @b: second number
+ * Return: the sum
  */
 
 int add(int a, int b)
 {
 int sum;
-sum = a + b;
+return (sum = a + b);
 }
