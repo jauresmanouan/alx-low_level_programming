@@ -26,7 +26,7 @@ _putchar((tab / 10) + 48);
 _putchar((tab % 10) + 48);
 }
 
-if (n == 8)
+if (n == 9)
 break;
 _putchar(44);
 _putchar(32);
