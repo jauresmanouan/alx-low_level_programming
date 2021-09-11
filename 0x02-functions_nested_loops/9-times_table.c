@@ -17,7 +17,7 @@ for (n = 0; n <= 9; n++)
 tab = m * n;
 if ((tab / 10) == 0)
 {
-_putchar(32);
+_putchar(0);
 _putchar((tab % 10) + 48);
 }
 else
