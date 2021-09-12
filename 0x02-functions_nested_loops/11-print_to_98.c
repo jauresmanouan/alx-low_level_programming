@@ -1,4 +1,4 @@
-l# include "main.h"
+# include "main.h"
 void compt_98(int n);
 void compt_98_3(int n);
 
