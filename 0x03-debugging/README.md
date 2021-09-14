@@ -1,0 +1,1 @@
+This project have the aim to give us a strong knowledge on how could we debug our codes.
