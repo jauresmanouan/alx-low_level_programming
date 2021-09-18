@@ -8,13 +8,8 @@
 
 int _isdigit(int c)
 {
-int i;
-
-for (i = 0; i <= 9; i++)
-{
-if (c == i + 48)
+if (c >= 48 && c <= 57)
 return (1);
 else
 return (0);
-}
 }
