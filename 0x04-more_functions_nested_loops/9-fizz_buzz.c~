@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+/**/
+
+int main(void)
+{
+  int i = 1;
+
+  for (; i <= 99; i++)
+    {
+      for (; (i % 15)== 0; i++)
+	{
+	  printf("FizzBuzz");
+	  putchar(32);
+	}
+      for (; (i % 3) == 0; i++)
+	{
+	  printf("Fizz");
+	  putchar(32);
+	}
+      for (; (i % 5) == 0; i++)
+	{
+	  printf("Buzz");
+	  putchar(32);
+	}
+      
+      printf("%d", i);
+      putchar(32);
+    }
+  putchar(10);
+}
