@@ -14,6 +14,8 @@ for (; l >= 0; l--)
 {
 if (*(s + l) == '\0')
 l = l - 1;
+if (*(s + l) == '\0' && *(s + (l + 1)) == '\0')
+break;
 _putchar(*(s + l));
 }
 _putchar(10);
