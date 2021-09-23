@@ -15,5 +15,5 @@ while (*s != '\0')
 i++;
 s++;
 }
-return(i);
+return (i);
 }
