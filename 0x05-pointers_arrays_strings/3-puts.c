@@ -19,3 +19,20 @@ break;
 }
 }
 }
+
+/**
+ * _strlen - count number of strings
+ * @str: string
+ * Return: numeber of string
+ */
+
+int _strlen(char *str)
+{
+int count = 0;
+while (*str != '\0')
+{
+count++;
+str++;
+}
+return (count);
+}
