@@ -13,7 +13,7 @@ for (i = 0; i < 1; i++)
 {
 while (*str != '\0')
 {
-write(1, str, _strlen(str));
+write(0, str, _strlen(str));
 _putchar(10);
 break;
 }
