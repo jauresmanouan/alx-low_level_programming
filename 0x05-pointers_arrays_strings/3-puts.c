@@ -11,9 +11,9 @@ int i;
 
 for (i = 0; i < 1; i++)
 {
-while (*str != '\0')
+while (*str)
 {
-write(0, str, _strlen(str));
+write(1, str, _strlen(str));
 _putchar(10);
 break;
 }
