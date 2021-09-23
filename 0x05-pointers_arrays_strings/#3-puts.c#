@@ -7,8 +7,13 @@
 
 void _puts(char *str)
 {
-write(1, str, _strlen(str));
-_putchar(10);
+int i;
+
+for (i = 0; i < 1; i++)
+{
+while (*str)
+{
+write(1,}
 }
 
 /**
