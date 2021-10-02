@@ -17,7 +17,7 @@ int y = 0, j = 0;
 for (; x >= i;)
 {
 if (x > 1 && x != 1)
-_putchar('.');
+_putchar(32);
 i++;
 if ((i + 1) == x)
 {
