@@ -1,34 +1,48 @@
 #include "main.h"
 
+int string_l(char *pointer);
+
 /**
- * rev_string - prints just like printf
- * @s: collect the system or user input
+ * rev_string - to reverse a string
+ * @s: the string that we want to reverse
  */
 
 void rev_string(char *s)
 {
-  int length = 0, ct;
-	int cnt = 0;
-	char wrd, tmp;
+int length, c;
 
-	while (s[length] != '\0')
-		length++;
+char *begin, *end, temp;
 
-	ct = length / 2;
-	if (length % 2 == 0)
-		ct -= 1;
+length = string_l(s);
+begin = s;
+end = s;
 
-	for (; ct >= 0; ct--, length--, cnt++)
-	{
-		if (*(s + length) == '\0')
-			length -= 1;
+for (c = 0; c < length - 1; c++)
+end++;
 
-		tmp = s[cnt];
-		wrd = *(s + length);
-		s[cnt] = wrd;
-		s[length] = tmp;
+for (c = 0; c < length / 2; c++)
+{
+temp = *end;
+*end = *begin;
+*begin = temp;
 
-		if (length <= 0)
-			s[cnt + 1] = '\0';
-	}
+begin++;
+end--;
+}
+}
+
+/**
+ * string_l - return the number of string
+ * @pointer: receive a pointer as parameter
+ * Return: number of string
+ */
+
+int string_l(char *pointer)
+{
+int c = 0;
+
+while (*(pointer + c) != '\0')
+c++;
+
+return (c);
 }
