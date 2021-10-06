@@ -17,8 +17,6 @@ for (; c <= l; c++)
 if (c % 2 == 0)
 _putchar(*(str + c));
 
-if (str[c] == '\0')
-break;
 }
 _putchar(10);
 }
@@ -31,7 +29,7 @@ _putchar(10);
 
 int string_l(char *pointer)
 {
-int p = 0;
+int p;
 
 while (*(pointer + p) != '\0')
 p++;
