@@ -15,7 +15,7 @@ length = string_leng(str);
 
 mid = length / 2;
 
-if (length % 2 != 0)
+if (length % 2 == 1)
 {
 mid++;
 }
