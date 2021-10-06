@@ -16,9 +16,10 @@ length = string_leng(str);
 mid = length / 2;
 
 if (length % 2 != 0)
+{
 mid++;
-
-for (mid; mid <= length; mid++)
+}
+for (mid; mid < length; mid++)
 {
 _putchar(*(str + mid));
 
