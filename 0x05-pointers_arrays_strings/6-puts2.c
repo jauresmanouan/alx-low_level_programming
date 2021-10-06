@@ -9,7 +9,7 @@ int string_l(char *pointer);
 
 void puts2(char *str)
 {
-int l = 0, c = 0;
+int l, c = 0;
 
 l = string_l(str);
 for (; c <= l; c++)
