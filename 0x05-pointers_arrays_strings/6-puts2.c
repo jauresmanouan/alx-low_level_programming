@@ -16,6 +16,9 @@ for (c = 0; c <= l; c++)
 {
 if (c % 2 == 0)
 _putchar(*(str + c));
+
+if (*(str + c) == '\0')
+break;
 }
 _putchar(10);
 }
