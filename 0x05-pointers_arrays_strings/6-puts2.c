@@ -14,7 +14,8 @@ int l, c;
 l = string_l(str);
 for (c = 0; c <= l; c++)
 {
-
+if (str[c] == '\0')
+break;
 if (c % 2 == 0)
 _putchar(*(str + c));
 }
