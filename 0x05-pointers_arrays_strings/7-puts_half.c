@@ -19,12 +19,13 @@ if (length % 2 == 1)
 {
 mid++;
 }
+
 for (mid; mid < length; mid++)
 {
-_putchar(*(str + mid));
-
 if (*(str + mid) == '\0')
 break;
+
+_putchar(*(str + mid));
 }
 _putchar(10);
 }
