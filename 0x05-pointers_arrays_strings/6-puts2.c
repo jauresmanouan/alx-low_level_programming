@@ -9,14 +9,14 @@ int string_l(char *pointer);
 
 void puts2(char *str)
 {
-int l, c = 0;
+int l, c;
 
 l = string_l(str);
-for (; c <= l; c++)
+for (c = 0; c <= l; c++)
 {
+
 if (c % 2 == 0)
 _putchar(*(str + c));
-
 }
 _putchar(10);
 }
