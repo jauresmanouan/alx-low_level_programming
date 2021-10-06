@@ -12,12 +12,12 @@ void puts2(char *str)
 int l = 0, c = 0;
 
 l = string_l(str);
-for (c = 0; c <= l; c++)
+for (; c <= l; c++)
 {
 if (c % 2 == 0)
 _putchar(*(str + c));
 
-if (*(str + c) == '\0')
+if (str[c] == '\0')
 break;
 }
 _putchar(10);
