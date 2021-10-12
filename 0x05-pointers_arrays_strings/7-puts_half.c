@@ -1,46 +1,25 @@
 #include "main.h"
 
-int string_leng(char *l);
-
 /**
- * puts_half - write the second half of a character
- * @str: string variable
+ * puts_half - cut the rope in half on string
+ * @str: collect strings
  */
 
 void puts_half(char *str)
 {
-int length, mid = 0;
+	int length = 0, half;
 
-length = string_leng(str);
+	while (str[length] != '\0')
+		length++;
 
-mid = length / 2;
-
-if (length % 2 != 0)
-{
-mid++;
-}
-
-for (mid; mid < length; mid++)
-{
-_putchar(*(str + mid));
-
-if (*(str + mid) == '\0')
-break;
-}
-_putchar(10);
-}
-
-/**
- * string_leng - count the number of string
- * @l: variable
- * Return: result
- */
-
-int string_leng(char *l)
-{
-int c;
-
-while (*(l + c) != '\0')
-c++;
-return (c);
-}
+	half = length / 2;
+	if (length % 2 == 1)
+		half++;
+	for (; half < length; half++)
+	{
+		if (str[half] == '\0')
+			break;
+		_putchar(str[half]);
+	}
+	_putchar(10);
+}y

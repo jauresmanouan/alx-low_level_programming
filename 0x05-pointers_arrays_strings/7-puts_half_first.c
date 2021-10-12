@@ -9,20 +9,22 @@ int string_leng(char *l);
 
 void puts_half(char *str)
 {
-int length, mid;
+int length, mid = 0;
 
 length = string_leng(str);
 
-mid = length / 2 ;
+mid = length / 2;
 
 if (length % 2 != 0)
+{
 mid++;
+}
 
-for (mid; mid <= length; mid++)
+for (mid; mid < length; mid++)
 {
 _putchar(*(str + mid));
 
-if (*(str + mid ) == '\0')
+if (*(str + mid) == '\0')
 break;
 }
 _putchar(10);
@@ -40,5 +42,5 @@ int c;
 
 while (*(l + c) != '\0')
 c++;
-return(c);
+return (c);
 }
