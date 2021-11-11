@@ -10,19 +10,33 @@
 
 char *_strncpy(char *dest, char *src, int n)
 {
-if (dest == 0)
-return (0);
+	int cnt = 0;
 
-char *ptr = dest;
+	if ((src[cnt] == 0) && (n > 0))
+	{
+		for (; cnt < n; cnt++)
+			dest[cnt] = 0;
+		return (dest);
+	}
 
-while (*src && n--)
-{
-*dest = *src;
-dest++;
-src++;
-}
+	while (src[cnt] != 0)
+		cnt++;
 
-*dest = '\0';
+	if ((n < cnt) && !(n <= 0))
+	{
+		cnt = 0;
+		for (; cnt < n; cnt++)
+			dest[cnt] = src[cnt];
+	}
+	else if (n > cnt && !(n <= 0))
+	{
+		cnt = 0;
+		for (; src[cnt] != 0; cnt++)
+			dest[cnt] = src[cnt];
+		for (; cnt < n; cnt++)
+		dest[cnt] = 0;
 
-return (ptr);
+	}
+
+	return (dest);
 }
