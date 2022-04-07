@@ -1,36 +1,46 @@
-# include "main.h"
+#include "main.h"
 
 /**
- * times_table - siplaytimes table until 9
+ * times_table - Print the 9 times table, starting with 0
+ * Return: 0
  */
 
 void times_table(void)
 {
-	
-	int m, n, tab;
-	tab = 0;
-	
-	for (m = 0; m <= 9; m++)
+	int x = 0; /* factor */
+	int y; /* count  */
+	int z; /* computed value */
+
+	while (x < 10)
 	{
-		for (n = 0; n <= 9; n++)
+		y = 0;
+		while (y < 10)
 		{
-			tab = m * n;
-			if ((tab / 10) == 0)
+			z = x * y;
+
+			if (z > 9)
 			{
-				_putchar(32);
-				_putchar((tab % 10) + 48);
+				_putchar(z / 10 + '0');
+				_putchar(z % 10 + '0');
+			}
+			else if (y != 0)
+			{
+				_putchar(' ');
+				_putchar(z + '0');
 			}
 			else
 			{
-				_putchar((tab / 10) + 48);
-				_putchar((tab % 10) + 48);
+				_putchar(z + '0');
 			}
-			
-			if (n == 9)
-				break;
-			_putchar(44);
-			_putchar(32);
+
+			if (y != 9)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
+			y++;
 		}
-		_putchar(10);
+		_putchar('\n');
+		x++;
 	}
 }
