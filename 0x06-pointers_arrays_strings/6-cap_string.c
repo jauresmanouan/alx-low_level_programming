@@ -1,66 +1,39 @@
 #include "main.h"
 
 /**
- * cap_string - capitalzes each word if lowercase
- * @s: words to check
- * Return: after modification of s, return s
+ * cap_string - capitalize all words of a string
+ * @str: string
+ * Return: `str`
  */
 
-char *cap_string(char *s)
+char *cap_string(char *str)
 {
-	int i = 0;
-	char snt[] = {32, ',', ';', '.', '!', '?', 34, '(', ')', 123, 125};
 
-	if (!s)
-		return (0);
+	int i, c;
+	int trigger;
+	char nots[] = ",;.!?(){}\n\t\" ";
 
-	if (s[0] >= 97 && s[0] <= 122)
-		s[0] -= 32;
-
-	while (s[i] != 0)
+	for (i = 0, trigger = 0; str[i] != '\0'; i++)
 	{
-		if (s[i] == 10 || s[i] == 9)
+		if (str[0] > 96 && str[0] < 123)
+			trigger = 1;
+		for (c = 0; nots[c] != '\0'; c++)
 		{
-			i++;
-			if (s[i] >= 97 && s[i] <= 122)
-				s[i] -= 32;
+			if (nots[c] == str[i])
+				trigger = 1;
 		}
-		else if (matcher(s[i], snt) == 0)
-			i++;
-		else if (s[i] == ',')
-			i++;
-		else if (matcher(s[i], snt) == 1)
+		if (trigger)
 		{
-			i++;
-			if (s[i] >= 97 && s[i] <= 122)
-				s[i] -= 32;
+			if (str[i] > 96 && str[i] < 123)
+			{
+				str[i] -= 32;
+				trigger = 0;
+			}
+			else if (str[i] > 64 && str[i] < 91)
+				trigger = 0;
+			else if (str[i] > 47 && str[i] < 58)
+				trigger = 0;
 		}
-		else
-			i++;
 	}
-
-	return (s);
-}
-
-/**
- * matcher - matches against a character
- * @x: a character
- * @snt: some characters stored
- *
- * Return: (1) a successful match
- */
-
-int matcher(char x, char *snt)
-{
-	int kp = 0;
-
-	if (!snt)
-		return (-9);
-	while (snt[kp] != 0)
-	{
-		if (x == snt[kp])
-			return (1);
-		kp++;
-	}
-	return (0);
+	return (str);
 }
