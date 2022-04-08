@@ -1,0 +1,19 @@
+#include "main.h"
+
+/**
+ *
+ *
+ *
+ */
+
+char *_memcpy(char *dest, char *src, unsigned int n)
+{
+	int i = 0;
+	char *csrc = (char *)src;
+	char *cdest = (char *)dest;
+
+	for (i; i < n; i++)
+		cdest[i] = csrc[i];
+
+	return (dest);
+}
