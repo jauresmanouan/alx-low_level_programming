@@ -11,11 +11,11 @@
 
 int main(int argc, char **argv)
 {
-	int num, result = 0, i;
+	int num, result = 0, i = 0;
 
 	while (argc-- > 1)
 	{
-		for (i = O; argv[argc][i]; i++)
+		for (i; argv[argc][i]; i++)
 		{
 			if (!(isdigit(argv[argc][i])))
 			{
